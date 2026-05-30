@@ -64,7 +64,7 @@ The service verifies Slack's request signature before processing the body.
 ## Run locally
 
 ```sh
-python -m venv .venv
+python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements-dev.txt
 flask --app wsgi run --port 8000
@@ -89,5 +89,5 @@ gunicorn 'wsgi:app' --bind 0.0.0.0:${PORT:-8000}
 
 ```sh
 pip install -r requirements-dev.txt
-pytest
+python3 -m pytest
 ```

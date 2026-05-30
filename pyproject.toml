@@ -1,0 +1,20 @@
+[project]
+name = "breakingalerthub"
+version = "0.1.0"
+description = "Slack alert channel to Google Sheets webhook"
+requires-python = ">=3.11"
+dependencies = [
+    "Flask",
+    "google-api-python-client",
+    "google-auth",
+    "gunicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
